@@ -1,0 +1,64 @@
+<div id="map" style="width:100%;height:530px;"></div>
+
+  <!-- Bootstrap Core CSS -->
+       <%= stylesheet_link_tag    'bootstrap', media: 'all', 'data-turbolinks-track' => true %>
+    <!--<link href="assets/bootstrap.min.css" rel="stylesheet">-->
+
+    <!-- Custom CSS -->
+     <%= stylesheet_link_tag    'landing-page', media: 'all', 'data-turbolinks-track' => true %>
+    <!--<link href="assets/landing-page.css" rel="stylesheet">-->
+
+<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey="></script>
+<script>
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
+    mapOption = { 
+        center: new daum.maps.LatLng(37.5554400754, 126.9361204389), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
+
+var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+ 
+// 마커를 표시할 위치와 title 객체 배열입니다 
+var positions = [
+    {
+        title: '늘편한통증의학과의원', 
+        latlng: new daum.maps.LatLng(37.5672329875, 126.9309081035)
+    },
+    {
+        title: '통증크리닉 세브란스병원본관', 
+        latlng: new daum.maps.LatLng(37.5614071269, 126.9408237307)
+    },
+    {
+        title: '화한의원', 
+        latlng: new daum.maps.LatLng(37.5632479124, 126.9209062181)
+    },
+     {
+        title: '해미소한의원', 
+        latlng: new daum.maps.LatLng(37.547110975, 126.929315271)
+    },
+    {
+        title: '더편한한의원', 
+        latlng: new daum.maps.LatLng(37.5524319716, 126.9543024402)
+    }
+];
+
+// 마커 이미지의 이미지 주소입니다
+var imageSrc = "http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png"; 
+    
+for (var i = 0; i < positions.length; i ++) {
+    
+    // 마커 이미지의 이미지 크기 입니다
+    var imageSize = new daum.maps.Size(24, 35); 
+    
+    // 마커 이미지를 생성합니다    
+    var markerImage = new daum.maps.MarkerImage(imageSrc, imageSize); 
+    
+    // 마커를 생성합니다
+    var marker = new daum.maps.Marker({
+        map: map, // 마커를 표시할 지도
+        position: positions[i].latlng, // 마커를 표시할 위치
+        title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+        image : markerImage // 마커 이미지 
+    });
+}
+</script>

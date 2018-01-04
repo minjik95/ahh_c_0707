@@ -1,0 +1,269 @@
+
+<!--<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+
+    <title>Landing Page - Start Bootstrap Theme</title>
+    -->
+   
+
+   
+
+    <style> body {font-family: 'Jeju Myeongjo', serif;} </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    
+
+</head>
+
+<body>
+    
+    <!-- Header -->
+    <a name="about"></a>
+    <div class="intro-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>AHH-C</h1>
+                        <h3>For our health</h3>
+                        <hr class="intro-divider">
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                              <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-default btn-lg">
+                                what's your problem?
+                              </button>
+                            </li>
+                        </ul>
+                        <% if user_signed_in? %>
+                          <a href="/users/sign_out">로그아웃</a>
+                        <% else %>
+                          <a href="/users/sign_in">로그인</a>
+                        <% end %>
+                                <!-- Modal -->
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                                    
+                         <form action="/body" method="post" id="modalsubmit">
+                            <div class="modal-body" style="padding-top:0;">
+                              
+                             <div id="checkboxs" class="form-check row" style="text-align: center;">
+                                  <label class="checkboxs col-12">
+                                    <input type="checkbox" name="shoulder" value="1" class="invisible">
+                                      <strong>어깨</strong>
+                                  </label>
+                                  <label class="checkboxs col-12">
+                                    <input type="checkbox" name="back" value="2" class="invisible">
+                                      <strong>허리</strong>
+                                  </label>
+                                  <label class="checkboxs col-12">
+                                    <input type="checkbox" name="pelvis" value="3" class="invisible">
+                                      <strong>골반</strong>
+                                  </label>
+                                  <label class="checkboxs col-12">
+                                    <input type="checkbox" name="leg" value="4" class="invisible">
+                                      <strong>다리</strong>
+                                  </label>
+                                  <label class="checkboxs col-12">
+                                    <input type="checkbox" name="foot" value="5" class="invisible">
+                                      <strong>발</strong>
+                                  </label>
+                              </div>  
+                              
+                            </div>
+                          </form>
+                              
+                              <div class="modal-footer">
+                                 <button type="submit" class="btn btn-block btn-round" style="background-color: #F4646A;" form="modalsubmit">
+                                      <i class="fa fa-check" aria-hidden="true" style="color: #fff;"></i>
+                                 </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <script>
+                        (function(){
+                          var checkboxs = document.getElementById("checkboxs");
+                        
+                          checkboxs.addEventListener("click", function(e){
+                            var target = e.target || e.srcElement;
+                            target.classList.toggle("is_checked");
+                          },true);
+                        
+                        })();
+                        </script>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
+    <!-- Page Content -->
+
+	<a  name="services"></a>
+    <div class="content-section-a">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">올바른 몸 사용설명서</h2>
+                    <p class="lead">당신의 몸을 위해 올바른 솔루션을 제공하세요<br><a target="_blank" href="http://join.deathtothestockphoto.com/"></a>당신의, 당신을 위한, 당신에 의한 <br>맞춤솔루션</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="https://images.unsplash.com/photo-1445384763658-0400939829cd?dpr=0.5&auto=format&fit=crop&w=1080&h=720&q=80&cs=tinysrgb&crop=&bg=" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">같이하는 운동은 더 즐겁다</h2>
+                    <p class="lead">혼자하는 운동이 지겨워지셨나요?<br>운동을 좋아하는 사람끼리의 커뮤니티 <br>AHH-C에서 운동얘기를 자유롭게 나눠보세요!<a target="_blank" href="http://www.psdcovers.com/">운동게시판</a></p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="https://images.unsplash.com/photo-1480756478914-7b11a1a792cb?dpr=0.75&auto=format&fit=crop&w=1080&h=720&q=80&cs=tinysrgb&crop=&bg=" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">꾸준한 건강검진으로 지키는 우리 건강<br></h2>
+                    <p class="lead">정기적인 검진으로 우리 몸상태를<br> 확인합시다:) <a target="_blank" href="http://www.google.com/fonts"></a> <a target="_blank" href="http://fontawesome.io"></a>.</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <a href= "/map"><img class="img-responsive" src="assets/map.png" alt=""></a>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+	<a  name="contact"></a>
+    <div class="banner">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Connect to AHH-C:</h2>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="list-inline banner-social-buttons">
+                        <li>
+                            <a href="https://www.pikicast.com/#!/menu=userpage&section=0&uid=28678017" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">pikicast</span></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.banner -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#services">Services</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted small">team 'ONE' &copy; Your Company 2017. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+   
+
+    <style> body {font-family: 'Jeju Myeongjo', serif;} </style>
+    
+      <!-- Bootstrap Core CSS -->
+       <%= stylesheet_link_tag    'bootstrap', media: 'all', 'data-turbolinks-track' => true %>
+    <!--<link href="assets/bootstrap.min.css" rel="stylesheet">-->
+
+    <!-- Custom CSS -->
+     <%= stylesheet_link_tag    'landing-page', media: 'all', 'data-turbolinks-track' => true %>
+    <!--<link href="assets/landing-page.css" rel="stylesheet">-->
+
+</body>
+
+</html>

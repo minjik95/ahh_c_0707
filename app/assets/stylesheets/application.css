@@ -1,0 +1,129 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ 
+
+   @import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+
+
+ .checkboxs{
+  color: #000;
+  background-color: #fff;
+  font-size: 18px;
+  padding: 20px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.is_checked{
+  background-color: #F4646A;
+  box-shadow: 0 0px 15px 3px rgba(255, 204, 153, 0.41);
+  color: #fff;
+  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+}
+
+.modal-header{
+  border-bottom-width: 0px;
+}
+
+.modal-footer{
+  border-top-width: 0px;
+}
+
+input[class="invisible"] {
+    display: none;
+}
+
+
+html, body {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+
+.login form {
+  margin-left:30%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  background: white;
+  width: 40%;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+  font-family: lato;
+  position: relative;
+  color: #333;
+  border-radius: 10px;
+}
+.login form header {
+  background: #7EDEE3;
+  padding: 30px 20px;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  border-radius: 10px 10px 0 0;
+}
+.login form label {
+  margin-left: 20px;
+  display: inline-block;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  position: relative;
+}
+.login form label span {
+  color: #FF3838;
+  font-size: 2em;
+  position: absolute;
+  left: 2.3em;
+  top: -10px;
+}
+.login form input {
+  display: block;
+  width: 78%;
+  margin-left: 20px;
+  padding: 5px 20px;
+  font-size: 1em;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid #ccc;
+}
+.login form .help {
+  margin-left: 20px;
+  font-size: 0.8em;
+  color: #777;
+}
+.login form button {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-family: inherit;
+  color: white;
+  background: #FF3838;
+  outline: none;
+  border: none;
+  padding: 5px 15px;
+  font-size: 1.3em;
+  font-weight: 400;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px rgba(51, 51, 51, 0.4);
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+.login form button:hover {
+  background: #ff5252;
+}

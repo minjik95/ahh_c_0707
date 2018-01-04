@@ -1,0 +1,54 @@
+
+
+<style> @import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+  body {font-family: 'Jeju Myeongjo', serif;} </style>
+  
+  <!-- Bootstrap Core CSS -->
+       <%= stylesheet_link_tag    'bootstrap', media: 'all', 'data-turbolinks-track' => true %>
+    <!--<link href="assets/bootstrap.min.css" rel="stylesheet">-->
+
+    <!-- Custom CSS -->
+     <%= stylesheet_link_tag    'landing-page', media: 'all', 'data-turbolinks-track' => true %>
+    <!--<link href="assets/landing-page.css" rel="stylesheet">-->
+
+<center>
+<!--- 김연아 시작 -->
+<table style="margin-top: 50px">
+<tr>
+    <% if @result1 == "1" %>
+        <td style = "font-size: 20pt; background-image : url('assets/armShoulder_hard.png'); width: 550px; height: 202px; color: white; text-align: center; font-weight: bold;"><a href="/shoulder" style="color: white; text-decoration: none">Shoulder</div></td>
+    <% else %>
+        <td style = "font-size: 20pt; background-image : url('assets/armShoulder_normal.png'); width: 550px; height: 202px; color: white; text-align: center; font-weight: bold;">Shoulder</td>
+    <% end %>
+</tr>
+<tr>
+    <% if @result2 == "2"%>
+        <td style = "font-size: 20pt; background-image : url('assets/wast_hard.png'); width: 550px; height: 201px; color: white; text-align: center; font-weight: bold;"><a href="/wailst" style="color: white; text-decoration: none">Waist</div></td>
+    <% else %>
+        <td style = "font-size: 20pt; background-image : url('assets/wast_normal.png'); width: 550px; height: 201px; color: #605655; text-align: center; font-weight: bold;">Waist</td>
+    <% end %>
+</tr>
+<tr>
+    <% if @result3 == "3"%>
+        <td style = "font-size: 20pt; background-image : url('assets/heap_hard.png'); width: 550px; height: 202px; color: white; text-align: center; font-weight: bold;"><a href="/hip" style="color: white; text-decoration: none">Hip</div></td>
+    <% else %>
+        <td style = "font-size: 20pt; background-image : url('assets/heap_normal.png'); width: 550px; height: 202px; color: #605655; text-align: center; font-weight: bold;">Hip</td>
+    <% end %>
+</tr>
+<tr>
+    <% if @result4 == "4"%>
+        <td style = "font-size: 20pt; background-image : url('assets/leg_harder.png'); width: 550px; height: 202px; color: white; text-align: center; font-weight: bold;"><a href="/leg" style="color: white; text-decoration: none">Thigh</div></td>
+    <% else %>
+        <td style = "font-size: 20pt; background-image : url('assets/leg_normal.png'); width: 550px; height: 202px; color: #605655; text-align: center; font-weight: bold;">Thigh</td>
+    <% end %>
+</tr>
+<tr>
+    <% if @result5 == "5"%>
+        <td style = "font-size: 20pt; background-image : url('/assets/foot_harder.png'); width: 550px; height: 197px; color: white; text-align: center; font-weight: bold;"><a href="/foot" style="color: white; text-decoration: none">Foot</div></td>
+    <% else %>
+        <td style = "font-size: 20pt; background-image : url('/assets/foot_normal.png'); width: 550px; height: 197px; color: #605655; text-align: center; font-weight: bold;">Foot</td>
+    <% end %>
+</tr>
+</table>
+<!-- 김연아 끝 -->
+</center>
